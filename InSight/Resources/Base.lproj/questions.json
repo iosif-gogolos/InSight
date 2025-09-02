@@ -1,0 +1,27 @@
+{
+  "questions": [
+    { "id": 1, "text": "Ich reflektiere regelmäßig meine Erfahrungen, um daraus zu lernen.", "domain": "Selbstreflexion" },
+    { "id": 2, "text": "Ich gehe neue Herausforderungen offen und neugierig an.", "domain": "Offenheit & Neugier" },
+    { "id": 3, "text": "Ich behalte auch in stressigen Situationen einen klaren Kopf.", "domain": "Resilienz & Stressbewältigung" },
+    { "id": 4, "text": "Ich kann gut erkennen, welche meiner Stärken ich in einer Situation einsetzen sollte.", "domain": "Selbstreflexion" },
+    { "id": 5, "text": "Ich bin einfühlsam gegenüber den Gefühlen anderer.", "domain": "Empathie & soziale Kompetenz" },
+    { "id": 6, "text": "Ich finde kreative Lösungen, wenn ich auf ein Problem stoße.", "domain": "Kreativität & Problemlösen" },
+    { "id": 7, "text": "Ich achte bewusst auf meine körperliche und mentale Gesundheit.", "domain": "Resilienz & Stressbewältigung" },
+    { "id": 8, "text": "Ich motiviere mich selbst, auch wenn Aufgaben langwierig oder schwierig sind.", "domain": "Selbstmotivation & Disziplin" },
+    { "id": 9, "text": "Ich suche aktiv nach Wissen und neuen Informationen.", "domain": "Offenheit & Neugier" },
+    { "id": 10, "text": "Ich übernehme gerne Verantwortung in Gruppen oder Teams.", "domain": "Führung & Verantwortung" }
+  ],
+  "domains": {
+    "Selbstreflexion": { "description": "Du nimmst dir bewusst Zeit, um über deine Erfahrungen nachzudenken. Das hilft dir, Klarheit zu gewinnen und aus Fehlern zu lernen." },
+    "Offenheit & Neugier": { "description": "Du gehst aktiv auf Neues zu und suchst Chancen zum Wachsen." },
+    "Resilienz & Stressbewältigung": { "description": "Achtsamkeit, Pausen oder kleine Routinen helfen, innere Stabilität zu stärken." },
+    "Empathie & soziale Kompetenz": { "description": "Du kannst dich gut in andere hineinversetzen und bist ein wertvoller Unterstützer." },
+    "Kreativität & Problemlösen": { "description": "Du findest innovative Ansätze und gehst Probleme kreativ an." },
+    "Selbstmotivation & Disziplin": { "description": "Du bleibst auch bei langen Aufgaben am Ball." },
+    "Führung & Verantwortung": { "description": "Du übernimmst Verantwortung und kannst andere inspirieren." }
+  },
+  "scoring": {
+    "method": "Durchschnitt pro Domäne (1-5)",
+    "output": "Top 2 Domänen = Stärken, 1 Domäne mit niedrigstem Score = Potenzialbereich"
+  }
+}
