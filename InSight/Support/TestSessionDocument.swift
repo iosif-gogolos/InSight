@@ -1,5 +1,5 @@
 //
-//  TestSwssionDocument.swift
+//  TestSessionDocument.swift
 //  InSight
 //
 //  Created by Iosif Gogolos on 02.09.25.
@@ -13,24 +13,22 @@ struct TestSessionDocument: FileDocument {
 
     var session: TestSession
 
-    // Standard: leeres Dokument
     init(session: TestSession = TestSession(title: "Neues Ergebnis")) {
         self.session = session
     }
 
-    // Laden aus Datei
     init(configuration: ReadConfiguration) throws {
         if let data = configuration.file.regularFileContents {
-            let decoded = try JSONDecoder().decode(TestSession.self, from: data)
-            self.session = decoded
+            let codableSession = try JSONDecoder().decode(CodableTestSession.self, from: data)
+            self.session = TestSession.fromCodable(codableSession)
         } else {
             throw CocoaError(.fileReadCorruptFile)
         }
     }
 
-    // Speichern in Datei
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = try JSONEncoder().encode(session)
+        let codableSession = session.toCodable()
+        let data = try JSONEncoder().encode(codableSession)
         return .init(regularFileWithContents: data)
     }
 }

@@ -10,9 +10,33 @@
 		346E70D62E66C9DD0085DD8D /* InSight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		346E72632E6762AB0085DD8D /* Exceptions for "InSight" folder in "InSight" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 346E70D52E66C9DD0085DD8D /* InSight */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		346E725D2E6761FF0085DD8D /* Exceptions for "InSight" folder in "Compile Sources" phase from "InSight" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 346E70D22E66C9DD0085DD8D /* Sources */;
+			membershipExceptions = (
+				"/Localized: Resources/questions.json",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		346E70D82E66C9DD0085DD8D /* InSight */ = {
+		346E72362E6761FF0085DD8D /* InSight */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				346E72632E6762AB0085DD8D /* Exceptions for "InSight" folder in "InSight" target */,
+				346E725D2E6761FF0085DD8D /* Exceptions for "InSight" folder in "Compile Sources" phase from "InSight" target */,
+			);
 			path = InSight;
 			sourceTree = "<group>";
 		};
@@ -32,8 +56,8 @@
 		346E70CD2E66C9DD0085DD8D = {
 			isa = PBXGroup;
 			children = (
-				346E70D82E66C9DD0085DD8D /* InSight */,
 				346E70D72E66C9DD0085DD8D /* Products */,
+				346E72362E6761FF0085DD8D /* InSight */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +85,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				346E70D82E66C9DD0085DD8D /* InSight */,
+				346E72362E6761FF0085DD8D /* InSight */,
 			);
 			name = InSight;
 			packageProductDependencies = (
@@ -255,6 +279,7 @@
 				DEVELOPMENT_TEAM = GFUWCGB3N8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InSight/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +309,7 @@
 				DEVELOPMENT_TEAM = GFUWCGB3N8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InSight/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

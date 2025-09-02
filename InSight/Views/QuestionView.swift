@@ -26,8 +26,13 @@ struct QuestionView: View {
                     } label: {
                         Text("\(value)")
                             .frame(width: 48, height: 48)
-                            .background(question.answerValue == value ? Color("PrimaryTurquoise") : Color("SoftWhite"))
-                            .foregroundColor(.primary)
+                            .background(
+                                question.answerValue == value
+                                    ? Color("PrimaryTurquoise")
+                                    : Color(uiColor: UIColor { traitCollection in
+                                        traitCollection.userInterfaceStyle == .dark ? .black : .white
+                                    })
+                            )                            .foregroundColor(.primary)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color("AppLightGray"), lineWidth: 1))
                         
