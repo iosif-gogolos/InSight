@@ -23,6 +23,7 @@ struct MainTabView: View {
             .tabItem {
                 Image(systemName: "house.fill")
                 Text("Home")
+                    
             }
             .tag(0)
             
