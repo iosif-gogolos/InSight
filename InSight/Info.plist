@@ -14,7 +14,8 @@
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>com.example.testResults</string>
+			<string>com.iosifgogolos.insight.testResults
+</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

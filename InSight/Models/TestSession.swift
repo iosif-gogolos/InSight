@@ -13,10 +13,12 @@ final class TestSession: Hashable {
     var id: UUID
     var title: String
     var createdAt: Date
+    
     var questions: [Question]
-    var answers: [Int]
-    var strengths: [String]
-    var suggestions: [String]
+    var answers: [Int] = []
+    var strengths: [String] = []
+    var suggestions: [String] = []
+    
     var note: String?
     
     init(title: String,

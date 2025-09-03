@@ -7,6 +7,12 @@
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var testResults = UTType(exportedAs:
-    "com.example.testResults")
+    static var testResults = UTType(exportedAs: "com.iosifgogolos.insight.testResults")
+}
+
+// Zusätzlich für bessere Kompatibilität:
+extension UTType {
+    static var testInsight: UTType {
+        UTType(exportedAs: "com.iosifgogolos.insight.testinsight")
+    }
 }
