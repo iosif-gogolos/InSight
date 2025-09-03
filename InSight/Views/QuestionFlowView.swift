@@ -1,10 +1,3 @@
-//
-//  QuestionFlowView.swift
-//  InSight
-//
-//  Created by Iosif Gogolos on 02.09.25.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -16,7 +9,7 @@ struct QuestionFlowView: View {
     @State private var completedSession: TestSession? = nil
     @State private var showValidationAlert = false
     
-    var onComplete: () -> Void // Callback when completely done
+    var onComplete: () -> Void
     
     var body: some View {
         VStack {
@@ -127,24 +120,32 @@ struct QuestionFlowView: View {
         let answers = questions.map { $0.answerValue }
         let title = "Self-Assessment \(Date.now.formatted(date: .numeric, time: .omitted))"
 
+        // Neue Fragen-Instanzen für die Session erstellen
+        let sessionQuestions = questions.map { question in
+            Question(text: question.text, domain: question.domain, answerValue: question.answerValue)
+        }
+
         let session = TestSession(
             title: title,
-            questions: questions,
+            questions: sessionQuestions,
             answers: answers,
             strengths: strengths,
             suggestions: suggestions
         )
 
-        // Insert and save immediately when test is finished
-        modelContext.insert(session)
+        // Session zur Datenbank hinzufügen und speichern
         do {
+            modelContext.insert(session)
             try modelContext.save()
-            print("Session saved successfully: \(session.title)")
+            print("Session erfolgreich gespeichert: \(session.title)")
+            
+            // Session für ResultsView setzen (aber nicht nochmal speichern)
+            completedSession = session
+            
         } catch {
-            print("Error saving session: \(error)")
+            print("Fehler beim Speichern der Session: \(error)")
+            // Hier könnten Sie einen Alert zeigen
         }
-
-        completedSession = session
     }
 
     private func resetFlow() {
